@@ -60,7 +60,7 @@ jobs:
           with:
             context: ./backend/
             push: true
-            tags: zhukov1414/kittygram_backend:latest
+            tags: zhukov1414/kittygram_backend
   frontend_tests:
     runs-on: ubuntu-latest
 
@@ -137,7 +137,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           source: "docker-compose.production.yml"
-          target: "taski"
+          target: "kittygram"
       - name: Executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
         with:
