@@ -12,19 +12,19 @@ services:
     volumes:
       - pg_data2:/var/lib/postgresql/data
   backend:
-    build: ./backend/
+    image: zhukov1414/kittygram_backend
     env_file: .env
     volumes:
       - static:/static
       - media:/app/media/cats/images/
   frontend:
-    build: ./frontend/
+    image: zhukov1414/kittygram_frontend
     env_file: .env
     command: cp -r /app/build/. /static/
     volumes:
       - static:/static
   gateway:
-    build: ./nginx/
+    image: zhukov1414/kittygram_gateway
     env_file: .env
     volumes:
       - static:/static
