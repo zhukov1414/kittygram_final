@@ -17,7 +17,7 @@
 	
 	SECRET_KEY=my-secret-key
 	DEBUG=True
-	ALLOWED_HOSTS=postgres://username:password@localhost:5432/dbname
+	ALLOWED_HOSTS='****'
 
 Также необходимо подключить базу данных
  Вам необходимо создать файл `.env` в корневой директории проекта и определить в нем необходимые переменные настроек. 
